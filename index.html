@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sivachandran Velusamy — Co-Founder & CTO, INOCYX</title>
+<meta name="description" content="Sivachandran Velusamy — Blockchain technologist, Co-Founder & CTO at INOCYX and Founding Director at Aadigo, Chennai, India.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;450;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --white:#ffffff;
+    --paper:#fbfaf7;
+    --ink:#111318;
+    --ink-2:#3c4048;
+    --muted:#70747e;
+    --line:#e8e6df;
+    --gold:#c99700;
+    --gold-strong:#a97e00;
+    --gold-soft:#faf3dd;
+    --gold-line:#eadfba;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--white);color:var(--ink);font-family:'Inter',sans-serif;font-weight:450;line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Fraunces',serif;font-weight:500;letter-spacing:-.01em}
+  a{color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 32px}
+
+  /* NAV */
+  .nav-bar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  nav{display:flex;justify-content:space-between;align-items:center;height:68px}
+  .wordmark{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:600;letter-spacing:.02em}
+  .wordmark i{font-style:normal;color:var(--gold)}
+  .nav-links{display:flex;gap:32px}
+  .nav-links a{text-decoration:none;font-size:.82rem;font-weight:500;letter-spacing:.04em;color:var(--muted);transition:color .2s}
+  .nav-links a:hover{color:var(--ink)}
+  .nav-cta{font-size:.82rem;font-weight:600;text-decoration:none;color:var(--ink);border:1px solid var(--ink);padding:9px 20px;border-radius:100px;transition:all .2s}
+  .nav-cta:hover{background:var(--ink);color:#fff}
+
+  /* HERO */
+  .hero{display:grid;grid-template-columns:1.35fr 1fr;gap:72px;align-items:center;padding:96px 0 104px}
+  .kicker{display:flex;align-items:center;gap:12px;font-size:.76rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-strong);margin-bottom:26px}
+  .kicker::before{content:"";width:36px;height:1px;background:var(--gold)}
+  .hero h1{font-size:clamp(2.6rem,5.4vw,4rem);line-height:1.06;margin-bottom:24px}
+  .hero .sub{font-size:1.08rem;color:var(--ink-2);max-width:520px;margin-bottom:14px}
+  .hero .meta{font-size:.9rem;color:var(--muted);margin-bottom:38px}
+  .hero .meta span{margin:0 10px;color:var(--line)}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-size:.88rem;font-weight:600;padding:14px 28px;border-radius:100px;transition:all .2s}
+  .btn-dark{background:var(--ink);color:#fff}
+  .btn-dark:hover{background:#000;transform:translateY(-1px)}
+  .btn-line{border:1px solid var(--line);color:var(--ink)}
+  .btn-line:hover{border-color:var(--gold);color:var(--gold-strong)}
+
+  .portrait-col{display:flex;justify-content:center}
+  .portrait{position:relative;width:min(320px,100%)}
+  .portrait::before{content:"";position:absolute;inset:-16px -16px 16px 16px;border:1px solid var(--gold-line);border-radius:2px;z-index:0}
+  .portrait::after{content:"";position:absolute;left:16px;right:-16px;bottom:-16px;height:5px;background:linear-gradient(90deg,var(--gold),#e8c545);z-index:2}
+  .portrait img{position:relative;z-index:1;width:100%;aspect-ratio:4/4.6;object-fit:cover;display:block;border-radius:2px;filter:saturate(.96)}
+
+  /* SECTION SCAFFOLD */
+  section{padding:88px 0;border-top:1px solid var(--line)}
+  .sec-head{display:grid;grid-template-columns:220px 1fr;gap:48px;margin-bottom:52px}
+  .sec-no{font-size:.76rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-strong)}
+  .sec-head h2{font-size:2rem;line-height:1.2;margin-top:6px}
+  .sec-body{display:grid;grid-template-columns:220px 1fr;gap:48px}
+  .sec-body .spacer{min-width:0}
+
+  /* ABOUT */
+  .lede{font-family:'Fraunces',serif;font-size:1.45rem;line-height:1.5;color:var(--ink);margin-bottom:28px;font-weight:400}
+  .about-cols{columns:2;column-gap:44px;color:var(--ink-2);font-size:.97rem}
+  .about-cols p{margin-bottom:16px;break-inside:avoid}
+  .fact-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:44px}
+  .fact{background:var(--white);padding:26px 28px}
+  .fact b{display:block;font-family:'Fraunces',serif;font-size:1.7rem;font-weight:500;margin-bottom:4px}
+  .fact span{font-size:.82rem;color:var(--muted);letter-spacing:.02em}
+
+  /* VENTURES */
+  .venture{border:1px solid var(--line);border-radius:4px;background:var(--white);margin-bottom:28px;overflow:hidden}
+  .venture-top{display:flex;align-items:baseline;gap:18px;padding:34px 40px 0;flex-wrap:wrap}
+  .venture-top h3{font-size:1.55rem}
+  .venture-top .role-tag{font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-strong)}
+  .venture-top .years{margin-left:auto;font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums}
+  .venture-sub{padding:6px 40px 0;font-size:.88rem;color:var(--muted)}
+  .venture p.desc{padding:18px 40px 0;color:var(--ink-2);font-size:.96rem;max-width:760px}
+  .v-list{list-style:none;padding:26px 40px 8px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0 36px}
+  .v-list li{padding:13px 0;border-bottom:1px solid var(--line);font-size:.9rem;color:var(--ink-2)}
+  .v-list li b{color:var(--ink);font-weight:600}
+  .venture-foot{display:flex;gap:26px;padding:22px 40px 30px;flex-wrap:wrap}
+  .venture-foot a{font-size:.85rem;font-weight:600;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:2px;transition:color .2s}
+  .venture-foot a:hover{color:var(--gold-strong)}
+  .accent-bar{height:3px;background:linear-gradient(90deg,var(--gold),#e8c545)}
+
+  /* EXPERIENCE */
+  .xp{border-top:1px solid var(--line)}
+  .xp-row{display:grid;grid-template-columns:170px 1fr auto;gap:24px;padding:24px 4px;border-bottom:1px solid var(--line);align-items:baseline}
+  .xp-row .yrs{font-size:.85rem;color:var(--muted);font-variant-numeric:tabular-nums}
+  .xp-row h3{font-size:1.05rem;font-family:'Inter',sans-serif;font-weight:600}
+  .xp-row .org{font-size:.88rem;color:var(--muted);margin-top:2px}
+  .xp-row .now{font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-strong);background:var(--gold-soft);border:1px solid var(--gold-line);padding:4px 12px;border-radius:100px;white-space:nowrap}
+
+  /* EDUCATION */
+  .edu-list{border-top:1px solid var(--line)}
+  .edu-row{display:grid;grid-template-columns:170px 1fr;gap:24px;padding:24px 4px;border-bottom:1px solid var(--line)}
+  .edu-row .yrs{font-size:.85rem;color:var(--muted);font-variant-numeric:tabular-nums}
+  .edu-row h3{font-size:1.05rem;font-family:'Inter',sans-serif;font-weight:600}
+  .edu-row .sch{font-size:.88rem;color:var(--muted);margin-top:2px}
+
+  /* CONTACT */
+  .contact{background:var(--ink);color:#fff;border-top:none}
+  .contact .sec-no{color:var(--gold)}
+  .contact h2{color:#fff}
+  .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.12)}
+  .contact-cell{background:var(--ink);padding:28px;text-decoration:none;transition:background .2s;display:block}
+  .contact-cell:hover{background:#1c1f26}
+  .contact-cell .lbl{font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+  .contact-cell .val{font-size:.95rem;color:#fff;font-weight:500;word-break:break-word}
+  .contact-cell .hint{font-size:.8rem;color:rgba(255,255,255,.5);margin-top:4px}
+
+  footer{background:var(--ink);color:rgba(255,255,255,.45);font-size:.8rem;padding:30px 0;border-top:1px solid rgba(255,255,255,.1)}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+  @media(max-width:880px){
+    .hero{grid-template-columns:1fr;gap:52px;padding:64px 0 72px}
+    .portrait-col{order:-1;justify-content:flex-start}
+    .portrait{width:min(260px,80%)}
+    .sec-head,.sec-body{grid-template-columns:1fr;gap:16px}
+    .about-cols{columns:1}
+    .fact-row{grid-template-columns:1fr}
+    .nav-links{display:none}
+    .venture-top,.venture-sub,.venture p.desc,.v-list,.venture-foot{padding-left:24px;padding-right:24px}
+    .xp-row{grid-template-columns:1fr;gap:4px}
+    .edu-row{grid-template-columns:1fr;gap:4px}
+  }
+</style>
+</head>
+<body>
+
+<div class="nav-bar">
+  <div class="wrap">
+    <nav>
+      <div class="wordmark">Sivachandran Velusamy<i>.</i></div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#ventures">Ventures</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+      </div>
+      <a class="nav-cta" href="#contact">Get in touch</a>
+    </nav>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="wrap">
+  <header class="hero">
+    <div>
+      <div class="kicker">Co-Founder &amp; CTO, INOCYX · Founding Director, Aadigo</div>
+      <h1>Building the infrastructure of digital assets.</h1>
+      <p class="sub">Blockchain technologist and fintech strategist leading regulatory-compliant crypto exchange and digital-gold platforms from Chennai, India.</p>
+      <p class="meta">Ph.D., Information &amp; Communication Engineering<span>|</span>Chennai, Tamil Nadu, India</p>
+      <div class="cta-row">
+        <a class="btn btn-dark" href="https://www.linkedin.com/in/sivachandran-velusamy-264397240/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+        <a class="btn btn-line" href="mailto:siva@inocyx.com">siva@inocyx.com</a>
+      </div>
+    </div>
+    <div class="portrait-col">
+      <div class="portrait">
+        <img src="https://d2gjqh9j26unp0.cloudfront.net/profilepic/d42a0b9b30b3e3e69c2527e252142ad2" alt="Sivachandran Velusamy"
+             onerror="this.onerror=null;this.src='https://www.aadigo.com/assets/team/Sivachandran%20Velusamy.png';">
+      </div>
+    </div>
+  </header>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-no">01 — Profile</div>
+      <h2>A decade at the intersection of finance and technology</h2>
+    </div>
+    <div class="sec-body">
+      <div class="spacer"></div>
+      <div>
+        <p class="lede">Gold is the most trusted asset on earth — and the worst served by technology. Crypto is the newest — and the least trusted. Sivachandran builds the compliant infrastructure that closes both gaps.</p>
+        <div class="about-cols">
+          <p>As Co-Founder and Chief Technology Officer of INOCYX, he leads the engineering of secure, scalable, and regulatory-compliant digital-asset trading infrastructure — from high-performance matching engines to real-world asset tokenization platforms.</p>
+          <p>As Founding Director of Aadigo, he sets the direction for a multi-jurisdiction digital-gold platform spanning India, Singapore, Malaysia and Indonesia, and owns its relationships with regulators and investors across all four markets.</p>
+          <p>He holds a Ph.D. in Information and Communication Engineering from Anna University and brings over a decade of experience spanning blockchain architecture, algorithmic trading systems, cybersecurity, compliance, and financial operations.</p>
+        </div>
+        <div class="fact-row">
+          <div class="fact"><b>10+ years</b><span>Fintech &amp; blockchain experience</span></div>
+          <div class="fact"><b>2 ventures</b><span>INOCYX and Aadigo, founded and led</span></div>
+          <div class="fact"><b>4 markets</b><span>India · Singapore · Malaysia · Indonesia</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VENTURES -->
+<section id="ventures">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-no">02 — Current Ventures</div>
+      <h2>Two platforms, one thesis: trusted digital assets</h2>
+    </div>
+
+    <div class="venture">
+      <div class="accent-bar"></div>
+      <div class="venture-top">
+        <h3>INOCYX</h3>
+        <span class="role-tag">Co-Founder &amp; Chief Technology Officer</span>
+        <span class="years">2022 — Present</span>
+      </div>
+      <div class="venture-sub">Innovative Cryptocurrency Exchange · Chennai, India</div>
+      <p class="desc">A regulatory-compliant digital-asset platform incubated under the Government of India's STPI FINBLUE program and registered as a Reporting Entity with the Financial Intelligence Unit (FIU) of India. INOCYX focuses on security, transparency and liquidity, and is expanding its regulatory footprint internationally, including Thailand.</p>
+      <ul class="v-list">
+        <li><b>Spot trading</b> — high-performance matching engine</li>
+        <li><b>OTC desk</b> — large-volume institutional trades</li>
+        <li><b>On-ramp</b> — seamless fiat-to-crypto rails</li>
+        <li><b>RWA tokenization</b> — real-world asset platforms</li>
+        <li><b>FIU registered</b> — compliant with Indian regulation</li>
+        <li><b>STPI FINBLUE</b> — Govt. of India fintech incubation</li>
+      </ul>
+      <div class="venture-foot">
+        <a href="https://inocyx.com" target="_blank" rel="noopener">inocyx.com</a>
+        <a href="https://in.linkedin.com/company/inocyx" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://x.com/inocyx" target="_blank" rel="noopener">X / Twitter</a>
+        <a href="https://play.google.com/store/apps/details?id=com.application.inocyx" target="_blank" rel="noopener">Google Play</a>
+        <a href="https://inocyx.com/assets/INOCYX-WHITE-PAPER.pdf" target="_blank" rel="noopener">Whitepaper</a>
+      </div>
+    </div>
+
+    <div class="venture">
+      <div class="accent-bar"></div>
+      <div class="venture-top">
+        <h3>Aadigo</h3>
+        <span class="role-tag">Founding Director</span>
+        <span class="years">Present</span>
+      </div>
+      <div class="venture-sub">Digital Gold Platform · India · Singapore · Malaysia · Indonesia</div>
+      <p class="desc">One gram of gold, five ways to hold it. Aadigo turns a single vaulted gram into a financial primitive — bought, leased for yield, pledged for credit, held as a regulated on-chain token, or redeemed for the physical bar — on one identity and one double-entry ledger, at a published spread of 1.5% or less.</p>
+      <ul class="v-list">
+        <li><b>Digital gold</b> — fractional 24K from ₹10, LBMA pricing</li>
+        <li><b>Gold lease</b> — 3–5% p.a. yield, insured and audited</li>
+        <li><b>Gold loan · xLoan</b> — up to 75% LTV via partner NBFCs</li>
+        <li><b>Tokenized · xAU</b> — ERC-3643, 1:1 backed, proof-of-reserve</li>
+        <li><b>Redemption network</b> — physical bar at partner stores</li>
+        <li><b>Multi-rail funding</b> — INR · SGD · MYR · IDR · USDC/USDT</li>
+      </ul>
+      <div class="venture-foot">
+        <a href="https://aadigo.com" target="_blank" rel="noopener">aadigo.com</a>
+        <a href="https://www.linkedin.com/company/aadigo-gold/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-no">03 — Career</div>
+      <h2>Experience</h2>
+    </div>
+    <div class="xp">
+      <div class="xp-row">
+        <div class="yrs">Present</div>
+        <div>
+          <h3>Founding Director</h3>
+          <div class="org">Aadigo · Digital Gold Platform</div>
+        </div>
+        <span class="now">Current</span>
+      </div>
+      <div class="xp-row">
+        <div class="yrs">2022 — Present</div>
+        <div>
+          <h3>Co-Founder &amp; Chief Technology Officer</h3>
+          <div class="org">INOCYX · Chennai, India</div>
+        </div>
+        <span class="now">Current</span>
+      </div>
+      <div class="xp-row">
+        <div class="yrs">2019 — 2022</div>
+        <div>
+          <h3>Blockchain Architect &amp; Algorithm Developer</h3>
+          <div class="org">Baimaas Consultancy Pvt Ltd</div>
+        </div>
+        <span></span>
+      </div>
+      <div class="xp-row">
+        <div class="yrs">2017 — 2019</div>
+        <div>
+          <h3>Director of Operations</h3>
+          <div class="org">Maxproasia Commodities</div>
+        </div>
+        <span></span>
+      </div>
+      <div class="xp-row">
+        <div class="yrs">2015 — 2017</div>
+        <div>
+          <h3>Compliance Officer</h3>
+          <div class="org">Silverline Commodities — India</div>
+        </div>
+        <span></span>
+      </div>
+      <div class="xp-row">
+        <div class="yrs">2013 — 2015</div>
+        <div>
+          <h3>Admin Manager → Senior Administrative Manager</h3>
+          <div class="org">Maxproasia Commodities</div>
+        </div>
+        <span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-no">04 — Academics</div>
+      <h2>Education</h2>
+    </div>
+    <div class="edu-list">
+      <div class="edu-row">
+        <div class="yrs">2015 — 2022</div>
+        <div>
+          <h3>Doctor of Philosophy (Ph.D.)</h3>
+          <div class="sch">Computer &amp; Information Sciences — Anna University, Chennai</div>
+        </div>
+      </div>
+      <div class="edu-row">
+        <div class="yrs">2012 — 2014</div>
+        <div>
+          <h3>Master of Engineering (M.Eng.)</h3>
+          <div class="sch">Applied Electronics — RVS College of Engineering &amp; Technology</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-no">05 — Contact</div>
+      <h2>Let's build something compliant, scalable, and trusted.</h2>
+    </div>
+    <div class="contact-grid">
+      <a class="contact-cell" href="https://www.linkedin.com/in/sivachandran-velusamy-264397240/" target="_blank" rel="noopener">
+        <div class="lbl">LinkedIn</div>
+        <div class="val">sivachandran-velusamy</div>
+        <div class="hint">Connect professionally</div>
+      </a>
+      <a class="contact-cell" href="mailto:siva@inocyx.com">
+        <div class="lbl">Email</div>
+        <div class="val">siva@inocyx.com</div>
+        <div class="hint">Direct inquiries</div>
+      </a>
+      <a class="contact-cell" href="https://inocyx.com" target="_blank" rel="noopener">
+        <div class="lbl">INOCYX</div>
+        <div class="val">inocyx.com</div>
+        <div class="hint">Crypto exchange</div>
+      </a>
+      <a class="contact-cell" href="https://aadigo.com" target="_blank" rel="noopener">
+        <div class="lbl">Aadigo</div>
+        <div class="val">aadigo.com</div>
+        <div class="hint">Digital gold</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Sivachandran Velusamy</span>
+    <span>Co-Founder &amp; CTO, INOCYX · Founding Director, Aadigo · Chennai, India</span>
+  </div>
+</footer>
+
+</body>
+</html>
